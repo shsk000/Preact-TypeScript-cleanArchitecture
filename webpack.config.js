@@ -1,15 +1,19 @@
 module.exports = {
-  entry: ['./src/index.js'],
+  mode: process.env.NODE_ENV || 'development',
+  entry: "./src/index.ts",
   module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        use: ['babel-loader'],
-      },
-    ],
+    rules: [{
+      test: /\.ts?$/,
+      use: [{
+        loader: 'babel-loader'
+      }, {
+        loader: 'ts-loader'
+      }],
+      exclude: /node_modules/,
+    }, ],
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
   devtool: 'source-map',
   output: {

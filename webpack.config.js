@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: process.env.NODE_ENV || 'development',
-  entry: "./src/index.ts",
+  entry: './src/client/main.tsx',
   module: {
     rules: [{
       test: /\.(ts|tsx)?$/,

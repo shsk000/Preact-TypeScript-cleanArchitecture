@@ -1,7 +1,4 @@
-import {
-    h,
-    render
-} from 'preact';
+import { h, render } from 'preact';
 
 import RouteList from './routeList';
 
